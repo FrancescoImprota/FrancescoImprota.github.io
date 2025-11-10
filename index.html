@@ -25,34 +25,28 @@
       width: 4rem;
     }
 
-    /* ----- ADDED: force smaller profile image ----- */
-    /* Default small size */
+    /* --- Updated: profile image styled like a Magic card --- */
     img[alt="Francesco Improta"] {
-      width: 32px !important;    /* 32px on small screens */
-      height: 32px !important;
-      max-width: 32px !important;
-      max-height: 32px !important;
+      width: 280px !important;      /* roughly card width */
+      height: 400px !important;     /* 2:3 ratio */
+      max-width: 90vw !important;   /* responsive on small screens */
       object-fit: cover !important;
-      border-radius: 9999px !important; /* keep rounded */
+      border-radius: 0 !important;  /* not circular */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       display: block;
     }
-    /* Slightly larger on medium+ screens */
     @media (min-width: 768px) {
       img[alt="Francesco Improta"] {
-        width: 40px !important;  /* 40px on md+ */
-        height: 40px !important;
-        max-width: 40px !important;
-        max-height: 40px !important;
+        width: 300px !important;
+        height: 450px !important;
       }
     }
-    /* If Tailwind isn't loading, this will still ensure compact sizing */
-    /* -------------------------------------------------------------- */
   </style>
 </head>
 <body class="flex flex-col justify-center items-center min-h-screen text-center p-6">
   
   <!-- Profile image -->
-  <img src="Profile pic.jpg" alt="Francesco Improta" class="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover shadow-sm mb-6 fade-in">
+  <img src="Profile pic.jpg" alt="Francesco Improta" class="shadow-sm mb-6 fade-in">
   
   <!-- Name -->
   <h1 class="text-3xl md:text-4xl font-semibold mb-2 fade-in">Francesco Improta</h1>
