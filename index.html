@@ -18,6 +18,12 @@
       from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
     }
+    hr {
+      border: none;
+      border-top: 1px solid #e5e5e5;
+      margin: 4rem auto;
+      width: 4rem;
+    }
   </style>
 </head>
 <body class="flex flex-col justify-center items-center min-h-screen text-center p-6">
@@ -37,8 +43,29 @@
     My research focuses on creating models and tools that bring clarity to complex systems.
   </p>
 
-  <!-- Optional contact line -->
-  <p class="text-sm text-gray-500 mt-8 fade-in">
+  <hr class="fade-in">
+
+  <!-- Academic Work -->
+  <section class="max-w-md text-left fade-in">
+    <h2 class="text-xl font-semibold mb-3 text-center">Academic Work</h2>
+    <ul class="space-y-3 text-gray-700">
+      <li>
+        <strong>[Paper Title 1]</strong><br>
+        <span class="text-sm text-gray-500">with [Co-authors], [Journal or Conference], [Year]</span>
+      </li>
+      <li>
+        <strong>[Paper Title 2]</strong><br>
+        <span class="text-sm text-gray-500">on [Topic / Keywords]</span>
+      </li>
+      <li>
+        <strong>[Work in progress]</strong><br>
+        <span class="text-sm text-gray-500">Developing [brief one-line description]</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Contact -->
+  <p class="text-sm text-gray-500 mt-10 fade-in">
     <a href="mailto:your.email@university.edu" class="hover:underline">your.email@university.edu</a>
   </p>
 
@@ -52,5 +79,6 @@
   </script>
 </body>
 </html>
+
 
 
