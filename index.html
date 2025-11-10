@@ -25,20 +25,18 @@
       width: 4rem;
     }
 
-    /* --- Updated: profile image styled like a Magic card --- */
+    /* --- Updated: keep full photo visible, smaller and rectangular --- */
     img[alt="Francesco Improta"] {
-      width: 280px !important;      /* roughly card width */
-      height: 400px !important;     /* 2:3 ratio */
-      max-width: 90vw !important;   /* responsive on small screens */
-      object-fit: cover !important;
-      border-radius: 0 !important;  /* not circular */
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      max-width: 250px !important;  /* adjust size here */
+      height: auto !important;      /* maintain proportions */
+      object-fit: contain !important; /* show entire image */
+      border-radius: 0 !important;  /* remove circle crop */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       display: block;
     }
     @media (min-width: 768px) {
       img[alt="Francesco Improta"] {
-        width: 300px !important;
-        height: 450px !important;
+        max-width: 300px !important; /* slightly larger on big screens */
       }
     }
   </style>
