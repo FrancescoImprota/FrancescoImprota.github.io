@@ -24,6 +24,29 @@
       margin: 4rem auto;
       width: 4rem;
     }
+
+    /* ----- ADDED: force smaller profile image ----- */
+    /* Default small size */
+    img[alt="Francesco Improta"] {
+      width: 32px !important;    /* 32px on small screens */
+      height: 32px !important;
+      max-width: 32px !important;
+      max-height: 32px !important;
+      object-fit: cover !important;
+      border-radius: 9999px !important; /* keep rounded */
+      display: block;
+    }
+    /* Slightly larger on medium+ screens */
+    @media (min-width: 768px) {
+      img[alt="Francesco Improta"] {
+        width: 40px !important;  /* 40px on md+ */
+        height: 40px !important;
+        max-width: 40px !important;
+        max-height: 40px !important;
+      }
+    }
+    /* If Tailwind isn't loading, this will still ensure compact sizing */
+    /* -------------------------------------------------------------- */
   </style>
 </head>
 <body class="flex flex-col justify-center items-center min-h-screen text-center p-6">
