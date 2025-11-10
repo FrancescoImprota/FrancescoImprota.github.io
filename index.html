@@ -2,68 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Francesco Improta</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
   <style>
     body {
       font-family: 'Inter', system-ui, sans-serif;
+      background-color: #fafafa;
+      color: #222;
     }
-    section {
-      scroll-margin-top: 5rem;
+    .fade-in {
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
-<body class="bg-white text-gray-800 leading-relaxed">
-  <!-- Header -->
-  <header class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md border-b border-gray-200 z-10">
-    <div class="max-w-3xl mx-auto flex justify-between items-center py-3 px-4">
-      <h1 class="font-medium text-gray-900">Francesco Improta</h1>
-      <nav class="space-x-4 text-sm">
-        <a href="#about" class="hover:text-blue-600">About</a>
-        <a href="#research" class="hover:text-blue-600">Research</a>
-        <a href="#contact" class="hover:text-blue-600">Contact</a>
-      </nav>
-    </div>
-  </header>
+<body class="flex flex-col justify-center items-center min-h-screen text-center p-6">
+  
+  <!-- Profile image -->
+  <img src="profile.jpg" alt="Francesco Improta" class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover shadow-sm mb-6 fade-in">
+  
+  <!-- Name -->
+  <h1 class="text-3xl md:text-4xl font-semibold mb-2 fade-in">Francesco Improta</h1>
+  
+  <!-- Subtitle -->
+  <p class="text-gray-600 mb-4 fade-in">Postgraduate Researcher</p>
+  
+  <!-- Description -->
+  <p class="max-w-md text-gray-700 leading-relaxed fade-in">
+    I explore the intersection of <em>technology</em>, <em>data</em>, and <em>human understanding</em>.
+    My research focuses on creating models and tools that bring clarity to complex systems.
+  </p>
 
-  <!-- Hero -->
-  <section class="flex flex-col items-center justify-center min-h-screen text-center px-4">
-    <img src="profile.jpg" alt="Francesco Improta" class="w-36 h-36 rounded-full object-cover mb-6 shadow-sm">
-    <h2 class="text-3xl font-semibold mb-2">Francesco Improta</h2>
-    <p class="text-gray-600 mb-2">Postgraduate Researcher</p>
-    <p class="max-w-md text-gray-600">Interested in the intersection of [your field — e.g. computational models, AI, and human behavior].</p>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="max-w-2xl mx-auto px-4 py-20 border-t border-gray-100">
-    <h3 class="text-xl font-semibold mb-4 text-gray-900">About</h3>
-    <p class="text-gray-700">
-      I am a postgraduate researcher at [University name], exploring [your topic].
-      My work focuses on [brief research interest]. Outside of research, I enjoy [personal or creative interest if you wish].
-    </p>
-  </section>
-
-  <!-- Research -->
-  <section id="research" class="max-w-2xl mx-auto px-4 py-20 border-t border-gray-100">
-    <h3 class="text-xl font-semibold mb-4 text-gray-900">Research Interests</h3>
-    <ul class="space-y-2 text-gray-700 list-disc list-inside">
-      <li>Computational approaches to [something]</li>
-      <li>Data-driven insights in [topic]</li>
-      <li>Applications of machine learning to [field]</li>
-    </ul>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="max-w-2xl mx-auto px-4 py-20 border-t border-gray-100 text-center">
-    <h3 class="text-xl font-semibold mb-4 text-gray-900">Contact</h3>
-    <p class="text-gray-700 mb-2">📧 <a href="mailto:your.email@university.edu" class="text-blue-600 hover:underline">your.email@university.edu</a></p>
-    <p><a href="https://github.com/francescoimprota" class="text-gray-600 hover:underline">GitHub</a> ·
-       <a href="https://www.linkedin.com/in/francescoimprota" class="text-gray-600 hover:underline">LinkedIn</a></p>
-  </section>
+  <!-- Optional contact line -->
+  <p class="text-sm text-gray-500 mt-8 fade-in">
+    <a href="mailto:your.email@university.edu" class="hover:underline">your.email@university.edu</a>
+  </p>
 
   <!-- Footer -->
-  <footer class="text-center text-gray-400 text-sm py-8 border-t border-gray-100">
+  <footer class="text-xs text-gray-400 mt-12 fade-in">
     © <span id="year"></span> Francesco Improta
   </footer>
 
@@ -72,4 +52,5 @@
   </script>
 </body>
 </html>
+
 
